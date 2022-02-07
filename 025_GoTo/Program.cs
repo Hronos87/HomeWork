@@ -9,20 +9,19 @@ namespace _025_GoTo
         {
         //Label:
             Console.WriteLine(" Метод два");
-            goto Label;
+           // goto Label;
         }
 
         static void MethodTwo (int a)
         {
-            Label:
+         //   Label:   // в параллельных методах не видит метку перехода
         }
         static void Main(string[] args)
         {
             //goto Label;
             int a = 0;
           
-            /*
-             * // Label:
+            Label:
             while (a == 0)
             {
                 a = 1;
@@ -40,16 +39,16 @@ namespace _025_GoTo
                     a = 0;
                 }
             }
-            */
+            
             do
             {
-            /Label:
+            //Label:
                 a = 1;
             }
             while (true);
-            //goto Label;
+            goto Label;
 
-          //  Console.ReadKey();
+           Console.ReadKey();
         }
     }
 }
